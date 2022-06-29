@@ -1,4 +1,5 @@
 import time
+from pygame import mixer
 
 
 encode = {"a": "!",
@@ -72,11 +73,16 @@ print("Charmy $!$$)[{#£ encode&decode'r\n")
 time.sleep(0.4)
 encode_decode = input("E for encode, D for decode: ").lower()
 
+mixer.init()
+mixer.music.load("Charmy.mp3")
+mixer.music.play()
+
 
 def hash():
     if encode_decode == "e":
         encrypt = input("Type to encrypt! ").lower()
         for char in encrypt:
+
             print(encode[char], end="")
 
     elif encode_decode == "d":
@@ -95,5 +101,3 @@ def hash():
 
 
 hash()
-
-
