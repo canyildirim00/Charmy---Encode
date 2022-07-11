@@ -32,11 +32,8 @@ encode = {"a": "!",
           "?": "5",
           "8": "ı",
           "ş": "6",
-          "ğ": "ğ"
-
-             }
-
-decode = {"!": "a",
+          "ğ": "ğ",
+"!": "a",
              "'": "b",
              "^": "c",
              "+": "d",
@@ -69,6 +66,8 @@ decode = {"!": "a",
 
              }
 
+
+
 print("Charmy $!$$)[{#£ encode&decode'r\n")
 time.sleep(0.4)
 encode_decode = input("E for encode, D for decode: ").lower()
@@ -89,7 +88,7 @@ def hash():
 
         decrypt = input("Type to decrypt! ").lower()
         for char in decrypt:
-            print(decode[char], end="")
+            print(encode[char], end="")
             time.sleep(0.1)
         print(" laa~")
 
